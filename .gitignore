@@ -1,0 +1,14 @@
+.DS_Store
+
+/.yarn/**/*
+!/.yarn/patches
+!/.yarn/plugins
+!/.yarn/releases
+!/.yarn/sdks
+!/.yarn/cache/*
+
+client/.yarn/**/*
+
+server/.yarn/**/*
+server/node_modules/*
+server/build/**/*

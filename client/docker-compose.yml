@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  client:
+    image: 'node:16'
+    container_name: bluesite-client
+    ports:
+      - '3000:3000'
+    working_dir: '/Users/opuslabs/Repos/bluesite/client'
+    volumes:
+      - './:/Users/opuslabs/Repos/bluesite/client'
+    command: 'yarn start'

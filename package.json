@@ -1,0 +1,19 @@
+{
+  "name": "bluecrm",
+  "packageManager": "yarn@3.1.0",
+  "scripts": {
+    "up:all": "docker-compose -f server/docker-compose.yml up --detach && docker-compose -f client/docker-compose.yml up --detach"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.9",
+    "guid-typescript": "^1.0.9",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-plugin-import": "^2.25.3"
+  }
+}

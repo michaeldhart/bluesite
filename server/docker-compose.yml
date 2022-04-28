@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  db:
+    image: 'mariadb:latest'
+    container_name: bluesite-db
+    ports:
+      - '3306:3306'
+    environment:
+      - MARIADB_USER=bluesite
+      - MARIADB_PASSWORD=libs
+      - MARIADB_ROOT_PASSWORD=libs
+  server:
+    image: 'node:16'
+    container_name: bluesite-server
+    ports:
+      - '7000:7000'
+    working_dir: '/Users/opuslabs/Repos/bluesite/server'
+    volumes:
+      - './:/Users/opuslabs/Repos/bluesite/server'
+    command: 'yarn start'
